@@ -5,3 +5,8 @@ additional feature, that two languages can be written on the two sides of
 pieces.
 
 Add new language files for your own language of choice.
+
+To generate pieces in English and Swedish, for instance, say:
+```
+./scrabble-gen.py --lang1 en --lang2 se
+```
