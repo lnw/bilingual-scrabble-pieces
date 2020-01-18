@@ -101,7 +101,7 @@ def single_piece(centrex, centrey, cut, frame, letter, letter_font_size, letter_
         string += '   sodipodi:nodetypes="ccccc"\n'
         string += '   id="path' + str(idno) + '"\n'
         string += '   inkscape:label="part"\n'
-        string += '   style="fill:none;stroke:#ff0000;stroke-width:0.01;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"\n'
+        string += '   style="fill:none;stroke:#ff0000;stroke-width:0.001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"\n'
         string += '   d="M {:.1f},{:.1f} a {:.1f},{:.1f} 0 0 1 {:.1f},{:.1f} h {:.1f} a {:.1f},{:.1f} 0 0 1 {:.1f},{:.1f} v {:.1f} a {:.1f},{:.1f} 0 0 1 {:.1f},{:.1f} h {:.1f} a {:.1f},{:.1f} 0 0 1 {:.1f},{:.1f} Z"\n'.format(centrex-sidelength/2.0, centrey-sidelength/2.0+rad_out, rad_out, rad_out, rad_out, -rad_out, sidelength-2*rad_out, rad_out, rad_out, rad_out, rad_out, sidelength-2*rad_out ,rad_out, rad_out, -rad_out, rad_out, -sidelength+2*rad_out, rad_out, rad_out, -rad_out, -rad_out)
         string += '   inkscape:connector-curvature="0" />\n'
     if(frame):
@@ -114,7 +114,7 @@ def single_piece(centrex, centrey, cut, frame, letter, letter_font_size, letter_
         string += '   inkscape:connector-curvature="0"/>\n'
     string += '<text\n'
     string += '   xml:space="preserve"\n'
-    string += """   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:{:.1f}px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"\n""".format(letter_font_size)
+    string += """   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:{:.1f}px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264"\n""".format(letter_font_size)
     string += '   text-anchor="middle"\n'
     string += '   x="{:.1f}"\n'.format(centrex + letter_x_offset)
     string += '   y="{:.1f}"\n'.format(centrey + 3.5)
@@ -123,10 +123,10 @@ def single_piece(centrex, centrey, cut, frame, letter, letter_font_size, letter_
     string += '     id="tspan864"\n'
     string += '     x="0"\n'
     string += '     y="0"\n'
-    string += """     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:{:.1f}px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;stroke-width:0.26458332">{}</tspan></text>\n""".format(letter_font_size, letter)
+    string += """     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:{:.1f}px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;stroke-width:0.264">{}</tspan></text>\n""".format(letter_font_size, letter)
     string += '<text\n'
     string += '   xml:space="preserve"\n'
-    string += """   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:{:.1f}px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"\n""".format(val_font_size)
+    string += """   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:{:.1f}px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264"\n""".format(val_font_size)
     string += '   text-anchor="end"\n'
     string += '   x="{:.1f}"\n'.format(centrex + sidelength_frame/2.0 - 0.5)
     string += '   y="{:.1f}"\n'.format(centrey + sidelength_frame/2.0 - 0.8)
@@ -135,7 +135,7 @@ def single_piece(centrex, centrey, cut, frame, letter, letter_font_size, letter_
     string += '     id="tspan868"\n'
     string += '     x="0"\n'
     string += '     y="0"\n'
-    string += """     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:{:.1f}px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;stroke-width:0.26458332">{}</tspan></text>\n""".format(val_font_size, value)
+    string += """     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:{:.1f}px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;stroke-width:0.264">{}</tspan></text>\n""".format(val_font_size, value)
     return string
 
 
