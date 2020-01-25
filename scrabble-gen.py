@@ -25,7 +25,7 @@ def read_letters(lang):
     return letters
 
 
-def get_svg_header(width, height):
+def get_svg_header(width_canv, height_canv):
     s = """<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -79,7 +79,7 @@ def get_svg_header(width, height):
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">\n""".format(width, height)
+     id="layer1">\n""".format(width_canv, height_canv)
     return s
 
 
@@ -141,9 +141,12 @@ def single_piece(centrex, centrey, cut, frame, letter, letter_font_size, letter_
 
 def print_one_side(pieces, outfile, frame, cut, lefttoright):
     output_str = ''
+    # assuming there is a predefined canvas size, and a different smaller material size
     print(pieces)
-    canvas_width = 200
-    canvas_height = 200
+    canvas_width = 1016.0
+    canvas_height = 711.2
+    material_width = 200
+    # material_height = 200
     output_str += get_svg_header(canvas_width, canvas_height)
     x_increment = 16
     y_increment = 16
@@ -151,7 +154,7 @@ def print_one_side(pieces, outfile, frame, cut, lefttoright):
         x_start_pos = x_increment/2.0
     else:
         x_increment = -x_increment
-        x_start_pos = canvas_width + x_increment/2.0
+        x_start_pos = material_width + x_increment/2.0
     x = x_start_pos
     y = y_increment/2.0
     letter_counter = 0
